@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Progresso</title>
+<script type="text/javascript">
+
+  var progresso = new Number()
+  var maximo = new Number()
+  var progresso = 0
+  var maximo = 60 
+    function start(){
+        if((progresso + 1) < maximo){
+            progresso=progresso +1;
+            document.getElementById("pg").value=progresso;
+            setTimeout("start();",1000);     
+        }
+    }
+</script>
+</head>
+<body onload="start()">
+<progress id="pg" max="60"></progress>
+</body>
+</html>
